@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { H2, Lead } from "@/components/ui/typography";
@@ -30,11 +31,13 @@ export function ContactCTASection() {
           
           <ScrollReveal delay={0.2}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="gap-2 group">
-                <MessageSquare className="w-5 h-5" />
-                Start a Conversation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="gap-2 group">
+                  <MessageSquare className="w-5 h-5" />
+                  Start a Conversation
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               <Button size="lg" variant="outline">
                 View Case Studies
               </Button>

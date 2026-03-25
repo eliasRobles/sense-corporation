@@ -16,6 +16,16 @@ export class CreateContactDto {
 
   @IsString()
   @MinLength(10)
+  @MaxLength(20)
+  phone: string;
+
+  @IsString()
+  @MinLength(1)
+  @MaxLength(100)
+  service: string;
+
+  @IsString()
+  @MinLength(10)
   @MaxLength(1000)
   message: string;
 }
