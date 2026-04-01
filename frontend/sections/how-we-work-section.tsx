@@ -41,7 +41,7 @@ const steps = [
 
 export function HowWeWorkSection() {
   return (
-    <Section spacing="xl">
+    <Section id="capabilities" spacing="xl">
       <Container>
         <div className="text-center space-y-4 mb-16">
           <ScrollReveal>
