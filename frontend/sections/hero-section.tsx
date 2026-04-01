@@ -6,17 +6,25 @@ import { Section } from "@/components/ui/section";
 import { H1, Lead } from "@/components/ui/typography";
 import { SlideUp, FadeIn } from "@/components/ui/animations";
 import { GradientBlur } from "@/components/ui/placeholders";
+import { FloatingParticles } from "@/components/ui/floating-particles";
+import { FloatingCode } from "@/components/ui/floating-code";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export function HeroSection() {
   return (
     <Section className="relative overflow-hidden" spacing="xl">
-      <GradientBlur variant="primary" className="top-0 right-0 w-1/2 h-1/2" />
+      {/* Tech Background Animations */}
+      <div className="absolute inset-0 -z-10">
+        <FloatingParticles />
+        <FloatingCode />
+        <GradientBlur variant="primary" className="top-0 right-0 w-1/2 h-1/2 opacity-50" />
+      </div>
+
       <Container>
-        <div className="flex flex-col items-center text-center space-y-8">
+        <div className="flex flex-col items-center text-center space-y-8 relative z-10">
           <FadeIn>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-muted border border-border">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-muted/80 backdrop-blur-sm border border-border">
               <span className="text-sm font-medium text-foreground">
                 Enterprise Technology Services
               </span>
