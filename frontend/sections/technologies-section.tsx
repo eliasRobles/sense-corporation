@@ -59,7 +59,7 @@ const technologies = {
 
 export function TechnologiesSection() {
   return (
-    <Section variant="muted" spacing="xl">
+    <Section id="technologies" variant="muted" spacing="xl">
       <Container>
         <div className="text-center space-y-4 mb-16">
           <ScrollReveal>

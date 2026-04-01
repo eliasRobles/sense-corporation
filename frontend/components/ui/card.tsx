@@ -1,15 +1,17 @@
-import { HTMLAttributes, forwardRef } from "react";
+"use client";
+
+import { HTMLAttributes, forwardRef, useRef, MouseEvent } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const cardVariants = cva(
-  "rounded-lg border transition-colors",
+  "rounded-lg border transition-all duration-300 relative overflow-hidden group",
   {
     variants: {
       variant: {
-        default: "bg-card border-border",
-        elevated: "bg-surface-elevated border-border shadow-sm",
-        outline: "bg-transparent border-border",
+        default: "bg-card border-border hover:border-primary/30 hover:shadow-xl hover:scale-[1.02]",
+        elevated: "bg-surface-elevated border-border shadow-sm hover:border-primary/30 hover:shadow-xl hover:scale-[1.02]",
+        outline: "bg-transparent border-border hover:border-primary/30 hover:shadow-lg hover:scale-[1.02]",
         ghost: "bg-transparent border-transparent",
       },
       padding: {
@@ -28,16 +30,50 @@ const cardVariants = cva(
 
 export interface CardProps
   extends HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof cardVariants> {}
+    VariantProps<typeof cardVariants> {
+  enableHoverEffect?: boolean;
+}
 
 const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ className, variant, padding, ...props }, ref) => {
+  ({ className, variant, padding, enableHoverEffect = true, ...props }, ref) => {
+    const cardRef = useRef<HTMLDivElement>(null);
+
+    const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+      if (!enableHoverEffect || !cardRef.current) return;
+
+      const card = cardRef.current;
+      card.style.transform = "scale(1.02)";
+    };
+
+    const handleMouseLeave = () => {
+      if (!enableHoverEffect || !cardRef.current) return;
+      cardRef.current.style.transform = "scale(1)";
+    };
+
     return (
       <div
-        ref={ref}
+        ref={(node) => {
+          cardRef.current = node;
+          if (typeof ref === "function") {
+            ref(node);
+          } else if (ref) {
+            ref.current = node;
+          }
+        }}
         className={cn(cardVariants({ variant, padding, className }))}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{ transition: "all 0.3s ease" }}
         {...props}
-      />
+      >
+        {/* Shine effect */}
+        {enableHoverEffect && (
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+          </div>
+        )}
+        {props.children}
+      </div>
     );
   }
 );

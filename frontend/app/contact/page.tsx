@@ -1,16 +1,26 @@
+"use client";
+
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { H1, H3, Body } from "@/components/ui/typography";
 import { ContactForm } from "@/components/contact-form";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
+import { FloatingParticles } from "@/components/ui/floating-particles";
+import { FloatingCode } from "@/components/ui/floating-code";
 
 export default function ContactPage() {
   return (
     <main>
-      <Section spacing="xl" className="pt-24">
+      <Section spacing="xl" className="pt-24 relative overflow-hidden">
+        {/* Tech Background Animations - Only for header area */}
+        <div className="absolute inset-x-0 top-0 h-[400px] -z-10">
+          <FloatingParticles />
+          <FloatingCode />
+        </div>
+
         <Container>
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-16 relative z-10">
             <H1>Get in Touch</H1>
             <Body className="text-text-secondary max-w-2xl mx-auto">
               Have a question or ready to start your project? We'd love to hear
@@ -28,7 +38,7 @@ export default function ContactPage() {
             {/* Contact Info Sidebar - 1 column */}
             <div className="space-y-6">
               {/* Contact Information */}
-              <Card>
+              <Card enableHoverEffect={false} className="shadow-sm hover:shadow-lg hover:scale-100 transition-shadow duration-300">
                 <CardContent className="pt-6 space-y-6">
                   <div>
                     <H3 className="mb-4">Contact Information</H3>
@@ -40,23 +50,10 @@ export default function ContactPage() {
                       <div>
                         <p className="text-sm font-medium">Email</p>
                         <a
-                          href="mailto:info@sensecorp.com"
-                          className="text-sm text-text-secondary hover:text-primary transition-colors"
+                          href="mailto:info@sense.cr"
+                          className="text-sm text-text-secondary hover:text-orange-500 transition-colors"
                         >
-                          info@sensecorp.com
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <Phone className="w-5 h-5 text-primary mt-0.5" />
-                      <div>
-                        <p className="text-sm font-medium">Phone</p>
-                        <a
-                          href="tel:+15551234567"
-                          className="text-sm text-text-secondary hover:text-primary transition-colors"
-                        >
-                          +1 (555) 123-4567
+                          info@sense.cr
                         </a>
                       </div>
                     </div>
@@ -66,11 +63,7 @@ export default function ContactPage() {
                       <div>
                         <p className="text-sm font-medium">Office</p>
                         <p className="text-sm text-text-secondary">
-                          123 Tech Boulevard
-                          <br />
-                          San Francisco, CA 94105
-                          <br />
-                          United States
+                          San José, Costa Rica
                         </p>
                       </div>
                     </div>
@@ -80,9 +73,7 @@ export default function ContactPage() {
                       <div>
                         <p className="text-sm font-medium">Business Hours</p>
                         <p className="text-sm text-text-secondary">
-                          Monday - Friday: 9:00 AM - 6:00 PM PST
-                          <br />
-                          Saturday - Sunday: Closed
+                          24/7 Support Available
                         </p>
                       </div>
                     </div>
@@ -91,7 +82,7 @@ export default function ContactPage() {
               </Card>
 
               {/* Why Contact Us */}
-              <Card>
+              <Card enableHoverEffect={false} className="shadow-sm hover:shadow-lg hover:scale-100 transition-shadow duration-300">
                 <CardContent className="pt-6 space-y-4">
                   <H3 className="text-lg">Why Contact Us?</H3>
                   <ul className="space-y-3 text-sm text-text-secondary">
