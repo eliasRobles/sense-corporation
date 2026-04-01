@@ -22,7 +22,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="h-8 w-8 rounded-md bg-primary transition-transform group-hover:scale-110" />
+            <div className="h-8 w-8 rounded-lg bg-orange-600 transition-transform group-hover:scale-110" />
             <span className="text-xl font-semibold text-foreground">
               Sense Corporation
             </span>
