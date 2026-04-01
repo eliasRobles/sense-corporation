@@ -55,7 +55,7 @@ const engagementModels = [
 
 export function EngagementModelsSection() {
   return (
-    <Section variant="muted" spacing="xl">
+    <Section id="engagement" variant="muted" spacing="xl">
       <Container>
         <div className="text-center space-y-4 mb-16">
           <ScrollReveal>

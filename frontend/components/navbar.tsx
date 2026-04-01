@@ -31,50 +31,79 @@ export function Navbar() {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
-              href="/#services"
-              className={cn(
-                "text-sm font-medium transition-all duration-200 relative py-1",
-                activeSection === "services"
-                  ? "text-primary"
-                  : "text-text-secondary hover:text-foreground"
-              )}
-            >
-              Services
-              {activeSection === "services" && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
-              )}
-            </Link>
-            <Link
               href="/#about"
               className={cn(
-                "text-sm font-medium transition-all duration-200 relative py-1",
+                "text-sm font-medium transition-all duration-200",
                 activeSection === "about"
-                  ? "text-primary"
+                  ? "text-orange-600"
                   : "text-text-secondary hover:text-foreground"
               )}
             >
               About
-              {activeSection === "about" && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+            </Link>
+            <Link
+              href="/#services"
+              className={cn(
+                "text-sm font-medium transition-all duration-200",
+                activeSection === "services"
+                  ? "text-orange-600"
+                  : "text-text-secondary hover:text-foreground"
               )}
+            >
+              Services
             </Link>
             <Link
               href="/#capabilities"
               className={cn(
-                "text-sm font-medium transition-all duration-200 relative py-1",
+                "text-sm font-medium transition-all duration-200",
                 activeSection === "capabilities"
-                  ? "text-primary"
+                  ? "text-orange-600"
                   : "text-text-secondary hover:text-foreground"
               )}
             >
-              Capabilities
-              {activeSection === "capabilities" && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+              How We Work
+            </Link>
+            <Link
+              href="/#technologies"
+              className={cn(
+                "text-sm font-medium transition-all duration-200",
+                activeSection === "technologies"
+                  ? "text-orange-600"
+                  : "text-text-secondary hover:text-foreground"
               )}
+            >
+              Technologies
+            </Link>
+            <Link
+              href="/#why-sense"
+              className={cn(
+                "text-sm font-medium transition-all duration-200",
+                activeSection === "why-sense"
+                  ? "text-orange-600"
+                  : "text-text-secondary hover:text-foreground"
+              )}
+            >
+              Why Us
+            </Link>
+            <Link
+              href="/#engagement"
+              className={cn(
+                "text-sm font-medium transition-all duration-200",
+                activeSection === "engagement"
+                  ? "text-orange-600"
+                  : "text-text-secondary hover:text-foreground"
+              )}
+            >
+              Engagement
             </Link>
             <Link
               href="/contact"
-              className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors"
+              className={cn(
+                "text-sm font-medium transition-all duration-200",
+                activeSection === "contact"
+                  ? "text-orange-600"
+                  : "text-text-secondary hover:text-foreground"
+              )}
             >
               Contact
             </Link>

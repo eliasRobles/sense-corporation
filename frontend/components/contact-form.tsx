@@ -83,11 +83,11 @@ export function ContactForm() {
   };
 
   return (
-    <Card>
+    <Card enableHoverEffect={false} className="shadow-sm hover:shadow-lg hover:scale-100 transition-shadow duration-300">
       <CardHeader>
         <CardTitle>Send us a message</CardTitle>
         <CardDescription>
-          Fill out the form below and we'll get back to you within 24 hours.
+          &nbsp;
         </CardDescription>
       </CardHeader>
       <CardContent>

@@ -48,7 +48,7 @@ const differentiators = [
 
 export function WhySenseSection() {
   return (
-    <Section spacing="xl">
+    <Section id="why-sense" spacing="xl">
       <Container>
         <div className="text-center space-y-4 mb-16">
           <ScrollReveal>

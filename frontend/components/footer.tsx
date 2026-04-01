@@ -23,8 +23,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="h-10 w-10 rounded-lg bg-orange-600" />
+            <div className="flex items-center space-x-2 mb-4 group cursor-pointer">
+              <div className="h-10 w-10 rounded-lg bg-orange-600 transition-transform group-hover:scale-110" />
               <span className="text-xl font-semibold text-foreground">
                 Sense Corporation
               </span>
@@ -38,7 +38,7 @@ export function Footer() {
             <div className="space-y-3">
               <a 
                 href="mailto:info@sense.cr"
-                className="flex items-center gap-2 text-sm text-text-secondary hover:text-primary transition-colors group"
+                className="flex items-center gap-2 text-sm text-text-secondary hover:text-orange-500 transition-colors group"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 info@sense.cr

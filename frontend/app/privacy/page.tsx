@@ -14,12 +14,9 @@ export default function PrivacyPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Privacy Policy
           </h1>
-          <p className="text-lg text-text-secondary">
-            Last updated: April 1, 2026
-          </p>
         </div>
 
-        <Card className="p-8 md:p-12">
+        <Card enableHoverEffect={false} className="p-8 md:p-12 shadow-sm hover:shadow-lg hover:scale-100 transition-shadow duration-300">
           <div className="prose prose-gray dark:prose-invert max-w-none">
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -131,7 +128,7 @@ export default function PrivacyPage() {
                 <li><strong>Withdraw Consent:</strong> Withdraw consent for marketing communications</li>
               </ul>
               <p className="text-text-secondary mb-4">
-                To exercise these rights, please contact us at <a href="mailto:info@sense.cr" className="text-primary hover:underline">info@sense.cr</a>
+                To exercise these rights, please contact us at <a href="mailto:info@sense.cr" className="text-primary hover:text-orange-500 hover:underline">info@sense.cr</a>
               </p>
             </section>
 
@@ -192,7 +189,7 @@ export default function PrivacyPage() {
                   <strong className="text-foreground">Sense Corporation</strong>
                 </p>
                 <p className="text-text-secondary mb-2">
-                  Email: <a href="mailto:info@sense.cr" className="text-primary hover:underline">info@sense.cr</a>
+                  Email: <a href="mailto:info@sense.cr" className="text-primary hover:text-orange-500 hover:underline">info@sense.cr</a>
                 </p>
                 <p className="text-text-secondary">
                   Location: San José, Costa Rica
