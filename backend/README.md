@@ -2,7 +2,7 @@
 
 NestJS backend API for Sense Corporation's corporate website featuring contact form processing and Microsoft 365 email integration.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Framework**: NestJS 10.x
 - **Language**: TypeScript (strict mode)
@@ -14,7 +14,7 @@ NestJS backend API for Sense Corporation's corporate website featuring contact f
 - **Security**: CORS enabled, helmet ready
 - **Deployment**: Vercel
 
-## 🏃 Getting Started
+## Getting Started
 
 ### Install Dependencies
 
@@ -62,7 +62,7 @@ npm run build
 npm run start:prod
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 backend/
@@ -92,7 +92,7 @@ backend/
 └── vercel.json                  # Vercel deployment config
 ```
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Root
 ```
@@ -170,7 +170,7 @@ Submit a contact form inquiry.
 }
 ```
 
-## 📧 Email Service
+## Email Service
 
 ### Microsoft 365 Integration
 
@@ -221,7 +221,7 @@ The email service uses Microsoft Graph API to send emails through Microsoft 365.
 - Next steps information
 - Contact information
 
-## 🔒 Security Features
+## Security Features
 
 ### CORS Configuration
 ```typescript
@@ -244,7 +244,7 @@ app.useGlobalPipes(new ValidationPipe({
 ### Environment Validation
 Uses `@nestjs/config` for type-safe environment variables.
 
-## 🛠️ Scripts
+## Scripts
 
 ```bash
 npm run start         # Start in production mode
@@ -260,7 +260,7 @@ npm run test:cov      # Run tests with coverage
 npm run test:e2e      # Run end-to-end tests
 ```
 
-## 🌐 Deployment
+## Deployment
 
 ### Vercel Configuration
 

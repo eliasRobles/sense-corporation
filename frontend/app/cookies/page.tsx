@@ -240,7 +240,7 @@ export default function CookiesPage() {
                   Email: <a href="mailto:info@sense.cr" className="text-primary hover:text-orange-500 hover:underline">info@sense.cr</a>
                 </p>
                 <p className="text-text-secondary">
-                  Location: San José, Costa Rica
+                  Location: San Jose, Costa Rica
                 </p>
               </div>
             </section>

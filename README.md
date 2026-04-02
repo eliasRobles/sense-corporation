@@ -2,17 +2,17 @@
 
 Modern technology services company website - professional, enterprise-grade platform for digital transformation and IT consulting services.
 
-## 🌟 Live Site
+## Live Site
 
 **Production**: Deployed on Vercel
 - Frontend: [sense-corporation.vercel.app](https://sense-corporation.vercel.app)
 - Backend API: [sense-api.vercel.app](https://sense-api.vercel.app)
 
-## 📋 Project Overview
+## Project Overview
 
 Full-stack monorepo featuring a modern, animated corporate website with integrated contact form and email services. Built with cutting-edge technologies and designed for professional enterprise presentation.
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 sense-corporation/
@@ -21,7 +21,7 @@ sense-corporation/
 └── docs/              # Documentation
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
@@ -43,7 +43,7 @@ npm run start:dev
 ```
 **Local URL**: http://localhost:3001/api
 
-## 💻 Technology Stack
+## Technology Stack
 
 ### Frontend
 - **Framework**: Next.js 15 (App Router, React 19)
@@ -63,29 +63,29 @@ npm run start:dev
 - **Config**: @nestjs/config (environment variables)
 - **Deployment**: Vercel
 
-## ✨ Key Features
+## Key Features
 
 ### Frontend
-- 🎨 **Modern Design System**: Complete component library with 15+ reusable components
-- 🌓 **Dark/Light Mode**: Seamless theme switching with persistent preferences
-- ✨ **Advanced Animations**: 
+- **Modern Design System**: Complete component library with 15+ reusable components
+- **Dark/Light Mode**: Seamless theme switching with persistent preferences
+- **Advanced Animations**: 
   - Floating particles and code snippets (Canvas-based)
   - Scroll-triggered reveals and fade-ins
   - 3D card hover effects with shimmer
   - Smooth section transitions
-- 📱 **Fully Responsive**: Mobile-first design approach
-- 🧭 **Smart Navigation**: Active section tracking with smooth scrolling
-- 📧 **Integrated Contact Form**: Full validation and error handling
-- ⚖️ **Legal Pages**: Privacy Policy, Terms of Service, Cookie Policy (Costa Rica compliant)
+- **Fully Responsive**: Mobile-first design approach
+- **Smart Navigation**: Active section tracking with smooth scrolling
+- **Integrated Contact Form**: Full validation and error handling
+- **Legal Pages**: Privacy Policy, Terms of Service, Cookie Policy (Costa Rica compliant)
 
 ### Backend
-- 📬 **Contact Form API**: Validated endpoint with DTO validation
-- 📧 **Email Service**: Microsoft 365 integration ready
-- 🏥 **Health Checks**: System status monitoring
-- 🔒 **CORS Configured**: Production-ready security settings
-- 🌐 **Environment Config**: Secure credential management
+- **Contact Form API**: Validated endpoint with DTO validation
+- **Email Service**: Microsoft 365 integration ready
+- **Health Checks**: System status monitoring
+- **CORS Configured**: Production-ready security settings
+- **Environment Config**: Secure credential management
 
-## 📄 Pages & Sections
+## Pages & Sections
 
 ### Main Pages
 - **Homepage** (`/`)
@@ -102,7 +102,7 @@ npm run start:dev
 - **Terms of Service** (`/terms`) - Legal terms and conditions
 - **Cookie Policy** (`/cookies`) - Tracking transparency
 
-## 🎨 Design System
+## Design System
 
 ### Color Scheme
 - **Primary**: Orange (#ea580c / orange-600) - Brand accent
@@ -114,7 +114,7 @@ npm run start:dev
 ### Theme Implementation
 All colors use CSS variables (`--primary`, `--background`, etc.) for instant theme switching without component re-renders.
 
-## 🔧 Development Workflow
+## Development Workflow
 
 ### Environment Variables
 
@@ -141,7 +141,7 @@ cd backend && npm run start:dev
 cd frontend && npm run dev
 ```
 
-## 📦 Deployment
+## Deployment
 
 Both frontend and backend are deployed on **Vercel** with automatic deployments from the main branch.
 
@@ -149,23 +149,23 @@ Both frontend and backend are deployed on **Vercel** with automatic deployments 
 - **Frontend**: `npm run build` (handled by Vercel)
 - **Backend**: `npm run build` → `npm run start:prod`
 
-## 📞 Contact Information
+## Contact Information
 
 - **Email**: info@sense.cr
-- **Location**: San José, Costa Rica
+- **Location**: San Jose, Costa Rica
 - **Support**: 24/7 Available
 
-## 📚 Documentation
+## Documentation
 
 See individual README files for detailed module documentation:
 - [Frontend Documentation](./frontend/README.md)
 - [Backend Documentation](./backend/README.md)
 
-## 🤝 Contributing
+## Contributing
 
 This is a private corporate website. For inquiries, contact the development team.
 
-## 📄 License
+## License
 
 Proprietary - All rights reserved by Sense Corporation
 

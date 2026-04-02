@@ -2,7 +2,7 @@
 
 Next.js 15 frontend application for Sense Corporation's corporate website with modern animations, dark/light themes, and comprehensive form handling.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 15 (App Router)
 - **React**: v19
@@ -16,7 +16,7 @@ Next.js 15 frontend application for Sense Corporation's corporate website with m
 - **Themes**: next-themes (persistent dark/light mode)
 - **Deployment**: Vercel
 
-## 🏃 Getting Started
+## Getting Started
 
 ### Install Dependencies
 
@@ -51,7 +51,7 @@ npm run build
 npm start
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 frontend/
@@ -103,7 +103,7 @@ frontend/
 └── public/                       # Static assets
 ```
 
-## 🎨 Design System
+## Design System
 
 ### Theme Architecture
 
@@ -145,7 +145,7 @@ Components use `class-variance-authority` (CVA) for variant management:
 - `FloatingCode`: Code snippets with parallax
 - `AnimatedGrid`: Pulsating dot matrix
 
-## 🎯 Key Features
+## Key Features
 
 ### Navigation
 - **Active Section Tracking**: Highlights current section while scrolling
@@ -169,7 +169,7 @@ Components use `class-variance-authority` (CVA) for variant management:
 - **Terms of Service**: Detailed service agreements
 - **Cookie Policy**: Tracking transparency
 
-## 🔧 Scripts
+## Scripts
 
 ```bash
 npm run dev          # Start development server (port 3000)
@@ -179,7 +179,7 @@ npm run lint         # Run ESLint
 npm run lint:fix     # Fix linting issues
 ```
 
-## 📱 Responsive Design
+## Responsive Design
 
 Breakpoints (Tailwind defaults):
 - `sm`: 640px
@@ -190,21 +190,21 @@ Breakpoints (Tailwind defaults):
 
 All sections are mobile-first with progressive enhancement.
 
-## 🎭 Animation Performance
+## Animation Performance
 
 - Canvas animations use `requestAnimationFrame` for 60fps
 - Framer Motion uses hardware acceleration (transform, opacity)
 - Images lazy-loaded with Next.js Image component
 - Code-splitting via Next.js App Router
 
-## 🌐 SEO & Metadata
+## SEO & Metadata
 
 Each page includes:
 - Dynamic `<title>` tags
 - Meta descriptions
 - OpenGraph tags (ready for configuration)
 
-## 📝 Notes
+## Notes
 
 - TypeScript strict mode enforced
 - No hardcoded colors (all use theme tokens)
@@ -212,7 +212,7 @@ Each page includes:
 - Forms handle loading/error states gracefully
 - Dark mode persists via localStorage
 
-## 🔗 External Dependencies
+## External Dependencies
 
 Key packages:
 - `next`: 15.x
@@ -225,7 +225,7 @@ Key packages:
 - `tailwindcss`: Utility-first CSS
 - `class-variance-authority`: Variant management
 
-## 🐛 Common Issues
+## Common Issues
 
 **Theme flashing on load**: 
 - Ensure `suppressHydrationWarning` on `<html>` tag

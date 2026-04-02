@@ -26,7 +26,7 @@ npm run start:dev
 
 Expected output:
 ```
-🚀 Sense Corporation API running on http://localhost:3001/api
+Sense Corporation API running on http://localhost:3001/api
 ```
 
 ### 2. Frontend Website

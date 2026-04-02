@@ -23,7 +23,7 @@ export class EmailService {
 
     if (!tenantId || !clientId || !clientSecret) {
       this.logger.warn(
-        '⚠️  Microsoft 365 credentials not configured. Email service will log only.',
+        'Microsoft 365 credentials not configured. Email service will log only.',
       );
       this.logger.warn('   Add credentials to .env to enable email sending.');
       return;
@@ -44,14 +44,14 @@ export class EmailService {
       );
 
       this.graphClient = Client.initWithMiddleware({ authProvider });
-      this.logger.log('✅ Microsoft Graph client initialized successfully');
+      this.logger.log('Microsoft Graph client initialized successfully');
     } catch (error) {
-      this.logger.error('❌ Failed to initialize Microsoft Graph client', error);
+      this.logger.error('Failed to initialize Microsoft Graph client', error);
     }
   }
 
   async sendContactNotification(contactData: CreateContactDto): Promise<void> {
-    this.logger.log('📧 Processing contact form submission...');
+    this.logger.log('Processing contact form submission...');
     this.logger.log(`   Name: ${contactData.name}`);
     this.logger.log(`   Email: ${contactData.email}`);
     this.logger.log(`   Company: ${contactData.company}`);
@@ -59,7 +59,7 @@ export class EmailService {
     this.logger.log(`   Service: ${contactData.service}`);
 
     if (!this.graphClient) {
-      this.logger.warn('📭 Email not sent (credentials not configured)');
+      this.logger.warn('Email not sent (credentials not configured)');
       return;
     }
 
@@ -70,9 +70,9 @@ export class EmailService {
       // Send confirmation to user
       await this.sendUserConfirmation(contactData);
 
-      this.logger.log('✅ Emails sent successfully');
+      this.logger.log('Emails sent successfully');
     } catch (error) {
-      this.logger.error('❌ Failed to send emails', error);
+      this.logger.error('Failed to send emails', error);
       throw error;
     }
   }
@@ -89,7 +89,7 @@ export class EmailService {
 
     const message = {
       message: {
-        subject: `🔔 New Contact Form Submission - ${contactData.company}`,
+        subject: `New Contact Form Submission - ${contactData.company}`,
         body: {
           contentType: 'HTML',
           content: this.getCompanyEmailTemplate(contactData),
@@ -109,7 +109,7 @@ export class EmailService {
       .api(`/users/${emailFrom}/sendMail`)
       .post(message);
 
-    this.logger.log(`📨 Company notification sent to ${emailTo}`);
+    this.logger.log(`Company notification sent to ${emailTo}`);
   }
 
   private async sendUserConfirmation(
@@ -143,7 +143,7 @@ export class EmailService {
       .api(`/users/${emailFrom}/sendMail`)
       .post(message);
 
-    this.logger.log(`📨 Confirmation sent to ${contactData.email}`);
+    this.logger.log(`Confirmation sent to ${contactData.email}`);
   }
 
   private getCompanyEmailTemplate(contactData: CreateContactDto): string {
@@ -352,7 +352,7 @@ export class EmailService {
       </div>
 
       <p style="margin: 0; color: #94a3b8; font-size: 12px;">
-        San José, Costa Rica
+        San Jose, Costa Rica
       </p>
       
       <p style="margin: 20px 0 0; color: #cbd5e1; font-size: 11px;">

@@ -63,7 +63,7 @@ export default function ContactPage() {
                       <div>
                         <p className="text-sm font-medium">Office</p>
                         <p className="text-sm text-text-secondary">
-                          San José, Costa Rica
+                          San Jose, Costa Rica
                         </p>
                       </div>
                     </div>
