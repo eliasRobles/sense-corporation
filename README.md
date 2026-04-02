@@ -5,8 +5,8 @@ Modern technology services company website - professional, enterprise-grade plat
 ## Live Site
 
 **Production**: Deployed on Vercel
-- Frontend: [sense-corporation.vercel.app](https://sense-corporation.vercel.app)
-- Backend API: [sense-api.vercel.app](https://sense-api.vercel.app)
+- Frontend: [sense.cr](https://sense.cr)
+- Backend API: [api.sense.cr](https://api.sense.cr)
 
 ## Project Overview
 
