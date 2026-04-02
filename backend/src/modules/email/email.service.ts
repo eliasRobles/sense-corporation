@@ -23,7 +23,7 @@ export class EmailService {
 
     if (!tenantId || !clientId || !clientSecret) {
       this.logger.warn(
-        '⚠️  Microsoft 365 credentials not configured. Email service will log only.',
+        'Microsoft 365 credentials not configured. Email service will log only.',
       );
       this.logger.warn('   Add credentials to .env to enable email sending.');
       return;
@@ -44,14 +44,14 @@ export class EmailService {
       );
 
       this.graphClient = Client.initWithMiddleware({ authProvider });
-      this.logger.log('✅ Microsoft Graph client initialized successfully');
+      this.logger.log('Microsoft Graph client initialized successfully');
     } catch (error) {
-      this.logger.error('❌ Failed to initialize Microsoft Graph client', error);
+      this.logger.error('Failed to initialize Microsoft Graph client', error);
     }
   }
 
   async sendContactNotification(contactData: CreateContactDto): Promise<void> {
-    this.logger.log('📧 Processing contact form submission...');
+    this.logger.log('Processing contact form submission...');
     this.logger.log(`   Name: ${contactData.name}`);
     this.logger.log(`   Email: ${contactData.email}`);
     this.logger.log(`   Company: ${contactData.company}`);
@@ -59,7 +59,7 @@ export class EmailService {
     this.logger.log(`   Service: ${contactData.service}`);
 
     if (!this.graphClient) {
-      this.logger.warn('📭 Email not sent (credentials not configured)');
+      this.logger.warn('Email not sent (credentials not configured)');
       return;
     }
 
@@ -70,9 +70,9 @@ export class EmailService {
       // Send confirmation to user
       await this.sendUserConfirmation(contactData);
 
-      this.logger.log('✅ Emails sent successfully');
+      this.logger.log('Emails sent successfully');
     } catch (error) {
-      this.logger.error('❌ Failed to send emails', error);
+      this.logger.error('Failed to send emails', error);
       throw error;
     }
   }
@@ -89,7 +89,7 @@ export class EmailService {
 
     const message = {
       message: {
-        subject: `🔔 New Contact Form Submission - ${contactData.company}`,
+        subject: `New Contact Form Submission - ${contactData.company}`,
         body: {
           contentType: 'HTML',
           content: this.getCompanyEmailTemplate(contactData),
@@ -109,7 +109,7 @@ export class EmailService {
       .api(`/users/${emailFrom}/sendMail`)
       .post(message);
 
-    this.logger.log(`📨 Company notification sent to ${emailTo}`);
+    this.logger.log(`Company notification sent to ${emailTo}`);
   }
 
   private async sendUserConfirmation(
@@ -143,7 +143,7 @@ export class EmailService {
       .api(`/users/${emailFrom}/sendMail`)
       .post(message);
 
-    this.logger.log(`📨 Confirmation sent to ${contactData.email}`);
+    this.logger.log(`Confirmation sent to ${contactData.email}`);
   }
 
   private getCompanyEmailTemplate(contactData: CreateContactDto): string {
@@ -298,7 +298,7 @@ export class EmailService {
       </div>
 
       <!-- What's Next -->
-      <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 25px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #ea580c;">
+      <div style="margin-bottom: 30px;">
         <h2 style="margin: 0 0 15px; color: #0f172a; font-size: 16px; font-weight: 600;">
           What happens next?
         </h2>
@@ -336,12 +336,9 @@ export class EmailService {
       <!-- CTA -->
       <div style="text-align: center; margin-top: 30px; padding-top: 30px; border-top: 1px solid #e2e8f0;">
         <p style="margin: 0 0 20px; color: #64748b; font-size: 14px;">
-          Need immediate assistance?
+          Want to learn more about us?
         </p>
-        <a href="tel:+15551234567" style="display: inline-block; background-color: #ea580c; color: #ffffff; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px; margin-right: 10px; box-shadow: 0 2px 4px rgba(234, 88, 12, 0.2);">
-          Call Us
-        </a>
-        <a href="https://sensecorp.com" style="display: inline-block; background-color: #ffffff; color: #ea580c; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px; border: 2px solid #ea580c;">
+        <a href="https://sense.cr" style="display: inline-block; background-color: #ea580c; color: #ffffff; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px; box-shadow: 0 2px 4px rgba(234, 88, 12, 0.2);">
           Visit Website
         </a>
       </div>
@@ -350,21 +347,12 @@ export class EmailService {
 
     <!-- Footer -->
     <div style="margin-top: 30px; text-align: center;">
-      <div style="margin-bottom: 20px;">
-        <h3 style="margin: 0 0 10px; color: #0f172a; font-size: 16px; font-weight: 600;">Sense Corporation</h3>
-        <p style="margin: 0; color: #64748b; font-size: 13px; line-height: 1.5;">
-          Modern Technology Solutions
-        </p>
-      </div>
-      
       <div style="margin-bottom: 15px;">
-        <a href="mailto:info@sensecorp.com" style="color: #ea580c; text-decoration: none; font-size: 13px; margin: 0 10px;">info@sensecorp.com</a>
-        <span style="color: #cbd5e1;">•</span>
-        <a href="tel:+15551234567" style="color: #ea580c; text-decoration: none; font-size: 13px; margin: 0 10px;">+1 (555) 123-4567</a>
+        <a href="mailto:info@sense.cr" style="color: #ea580c; text-decoration: none; font-size: 13px;">info@sense.cr</a>
       </div>
 
       <p style="margin: 0; color: #94a3b8; font-size: 12px;">
-        123 Tech Boulevard, San Francisco, CA 94105
+        San Jose, Costa Rica
       </p>
       
       <p style="margin: 20px 0 0; color: #cbd5e1; font-size: 11px;">

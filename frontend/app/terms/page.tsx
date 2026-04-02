@@ -237,7 +237,7 @@ export default function TermsPage() {
                 12.2 Jurisdiction
               </h3>
               <p className="text-text-secondary mb-4">
-                Any disputes arising out of or relating to these Terms or our Services shall be subject to the exclusive jurisdiction of the courts of San José, Costa Rica.
+                Any disputes arising out of or relating to these Terms or our Services shall be subject to the exclusive jurisdiction of the courts of San Jose, Costa Rica.
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -285,7 +285,7 @@ export default function TermsPage() {
                   Email: <a href="mailto:info@sense.cr" className="text-primary hover:text-orange-500 hover:underline">info@sense.cr</a>
                 </p>
                 <p className="text-text-secondary">
-                  Location: San José, Costa Rica
+                  Location: San Jose, Costa Rica
                 </p>
               </div>
             </section>

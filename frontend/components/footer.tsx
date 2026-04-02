@@ -45,7 +45,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-2 text-sm text-text-secondary">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>San José, Costa Rica</span>
+                <span>San Jose, Costa Rica</span>
               </div>
             </div>
 
