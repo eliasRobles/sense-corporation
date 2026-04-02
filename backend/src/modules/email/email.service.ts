@@ -298,7 +298,7 @@ export class EmailService {
       </div>
 
       <!-- What's Next -->
-      <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 25px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #ea580c;">
+      <div style="margin-bottom: 30px;">
         <h2 style="margin: 0 0 15px; color: #0f172a; font-size: 16px; font-weight: 600;">
           What happens next?
         </h2>
@@ -336,12 +336,9 @@ export class EmailService {
       <!-- CTA -->
       <div style="text-align: center; margin-top: 30px; padding-top: 30px; border-top: 1px solid #e2e8f0;">
         <p style="margin: 0 0 20px; color: #64748b; font-size: 14px;">
-          Need immediate assistance?
+          Want to learn more about us?
         </p>
-        <a href="tel:+15551234567" style="display: inline-block; background-color: #ea580c; color: #ffffff; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px; margin-right: 10px; box-shadow: 0 2px 4px rgba(234, 88, 12, 0.2);">
-          Call Us
-        </a>
-        <a href="https://sensecorp.com" style="display: inline-block; background-color: #ffffff; color: #ea580c; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px; border: 2px solid #ea580c;">
+        <a href="https://sense.cr" style="display: inline-block; background-color: #ea580c; color: #ffffff; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px; box-shadow: 0 2px 4px rgba(234, 88, 12, 0.2);">
           Visit Website
         </a>
       </div>
@@ -350,21 +347,12 @@ export class EmailService {
 
     <!-- Footer -->
     <div style="margin-top: 30px; text-align: center;">
-      <div style="margin-bottom: 20px;">
-        <h3 style="margin: 0 0 10px; color: #0f172a; font-size: 16px; font-weight: 600;">Sense Corporation</h3>
-        <p style="margin: 0; color: #64748b; font-size: 13px; line-height: 1.5;">
-          Modern Technology Solutions
-        </p>
-      </div>
-      
       <div style="margin-bottom: 15px;">
-        <a href="mailto:info@sensecorp.com" style="color: #ea580c; text-decoration: none; font-size: 13px; margin: 0 10px;">info@sensecorp.com</a>
-        <span style="color: #cbd5e1;">•</span>
-        <a href="tel:+15551234567" style="color: #ea580c; text-decoration: none; font-size: 13px; margin: 0 10px;">+1 (555) 123-4567</a>
+        <a href="mailto:info@sense.cr" style="color: #ea580c; text-decoration: none; font-size: 13px;">info@sense.cr</a>
       </div>
 
       <p style="margin: 0; color: #94a3b8; font-size: 12px;">
-        123 Tech Boulevard, San Francisco, CA 94105
+        San José, Costa Rica
       </p>
       
       <p style="margin: 20px 0 0; color: #cbd5e1; font-size: 11px;">

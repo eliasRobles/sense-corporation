@@ -200,7 +200,7 @@ export function ContactForm() {
 
           {/* Submit Status Messages */}
           {submitStatus === "success" && (
-            <div className="flex items-center gap-2 p-4 rounded-md bg-green-50 dark:bg-green-950/20 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
+            <div className="flex items-center gap-2 p-4 rounded-md bg-green-500 dark:bg-green-950/20 text-white dark:text-green-400 border border-green-600 dark:border-green-800">
               <CheckCircle2 className="w-5 h-5" />
               <p className="text-sm font-medium">
                 Message sent successfully! We'll be in touch soon.
@@ -209,7 +209,7 @@ export function ContactForm() {
           )}
 
           {submitStatus === "error" && (
-            <div className="flex items-center gap-2 p-4 rounded-md bg-red-50 dark:bg-red-950/20 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-800">
+            <div className="flex items-center gap-2 p-4 rounded-md bg-red-500 dark:bg-red-950/20 text-white dark:text-red-400 border border-red-600 dark:border-red-800">
               <AlertCircle className="w-5 h-5" />
               <p className="text-sm font-medium">{errorMessage}</p>
             </div>
