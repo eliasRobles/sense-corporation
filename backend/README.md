@@ -298,7 +298,7 @@ Add these in Vercel dashboard:
 - `MICROSOFT_EMAIL_FROM`
 - `FRONTEND_URL` (production frontend URL)
 
-## 📝 Development Notes
+## Development Notes
 
 ### Adding New Endpoints
 
@@ -327,7 +327,7 @@ npm run start:debug
 
 Attach debugger to port 9229 in VS Code.
 
-## 🐛 Common Issues
+## Common Issues
 
 **Port already in use:**
 ```bash
@@ -345,13 +345,13 @@ lsof -ti:3001 | xargs kill -9
 - Verify `FRONTEND_URL` matches your frontend URL
 - Check that frontend is using correct `NEXT_PUBLIC_API_URL`
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [NestJS Documentation](https://docs.nestjs.com)
 - [Microsoft Graph API](https://docs.microsoft.com/graph)
 - [Azure AD App Registration](https://docs.microsoft.com/azure/active-directory)
 
-## 📞 Support
+## Support
 
 For issues or questions, contact the development team at info@sense.cr
 - `npm run test` - Run unit tests
